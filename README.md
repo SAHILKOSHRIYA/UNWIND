@@ -5,7 +5,7 @@ Here you can find all your favourite movies and tv shows in one place with detai
 you can search your movies, or filter movies and tv shows by Genre's (multiple Genre Allowed for filteration)
 Also details of each can be seen
 
-DEMO: - https://mayankratre10.github.io/UNWIND/
+DEMO: - https://sahilkoshriya.github.io/UNWIND/
 
 ![Screenshot (14)](https://github.com/MAYANKRATRE10/UNWIND/assets/82997237/21c97072-f912-490c-9422-250acbac1288)
 ![Screenshot (33)](https://github.com/MAYANKRATRE10/UNWIND/assets/82997237/c623cd5a-a726-45b8-8dff-cc7b65f106ee)
