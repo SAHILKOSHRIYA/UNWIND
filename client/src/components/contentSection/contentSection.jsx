@@ -12,7 +12,11 @@ const ContentSection = ({items,tittle}) => {
     {tittle && <div className="tittle">{tittle}</div>}
         <Carousel responsive={responsive} itemClass='content' autoPlay={true} autoPlaySpeed={3000} shouldResetAutoplay={true}   slidesToSlide={2}  focusOnSelect={true} rewind={true} rewindWithAnimation={true} customTransition='transform 1000ms ease-in-out'>
           {items ? items.map((item,index)=>{
-            return(<Card key={item.id} details={item} />)
+            if(item.known_for){
+              return(<Card key={item.id} details={item?.known_for[0]} />)
+            }else{
+              return(<Card key={item.id} details={item} />)
+            }
           }):<Card/>}
           {!items && dummy.map((item,index)=>{
             return(<Card key={index} />)
