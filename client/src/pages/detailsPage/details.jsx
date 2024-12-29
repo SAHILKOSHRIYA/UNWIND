@@ -17,9 +17,12 @@ const details = (props) => {
   const [details, setDetails] = useState(null);
   const [videoList, setVideoList] = useState(null);
   const [movieList, setmovieList] = useState(null);
+  const [loading,setLoading]=useState(true);
   useEffect(() => {
+    setLoading(true);
     fetchMovieDetails(tittle, id).then((data) => {
       setDetails(data);
+      setLoading(false);
     });
     let type = "/videos";
     fetchMovieDetails(tittle, id, type).then((data) => {
@@ -31,6 +34,7 @@ const details = (props) => {
     });
   }, [id]);
   return (
+    loading ? <div className="loading"><img src="https://i.gifer.com/ZZ5H.gif" alt="Loading.." srcset="" /></div>:
     <div className="container">
       <div className="banner">
       {details && <LazyLoadImage
